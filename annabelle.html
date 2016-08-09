@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/Javascript">
+        function sayhello() {
+            alert ('hithere')
+            }
+        
+        function moveright() {
+              redball.left =redball.left +15
+           
+            
+        }
+        function moveleft() {
+             redball.left =redball.left -15
+           }
+           
+        function moveup() {
+            redball.top = redball.top -20
+            }
+            
+          function movedown() {
+            redball.top = redball.top +20
+          }
+         function moveupright() {
+            moveup();
+            moveright();
+             
+         }
+         function movedownleft() {
+             movedown();
+             moveleft();
+         }
+         function movedownright() {
+             movedown();
+             moveright();
+         }
+         
+         function moveupleft() {
+            moveup();
+            moveleft();
+           }
+         function movesquare(){
+               var x = 0;
+               var y = 0;
+               
+               for(x=0; x<10; x++){
+                   moveright();
+               }
+               
+               for(y=0; y<10; y++){
+                   moveup();
+               }
+               
+               for(x=10; x>0; x--){
+                   moveleft();
+               }
+               
+               for(y=10; y>0; y--){
+                   movedown();
+               }
+               
+         }
+         function movetriangle() {
+            for(x=0; x<10; x++){
+                   moveright();
+               }
+               
+             for(y=0; y<10; y++){
+                   moveupleft();
+               }
+               
+             for(x=10; x>0; x--){
+                   movedownright();
+            
+         }
+        </script> 
+    <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+    </head>
+    <body>
+   <button onclick="sayhello()">press here </button> 
+  <img id="redball" src="http://storage.googleapis.com/ics-redball/redball.jpg"/>
+        <button onclick="moveright()">move right</button>
+        <button onclick="moveleft()">move left</button>
+        <button onclick="moveup()">move up</button>
+        <button onclick="movedown()">move down</button>
+        <button onclick="moveupright()">Move Up Right</button>
+        <button onclick="movedownright()">move down right</button>
+        <button onclick="movedownleft()">move down left</button>
+        <button onclick="movesquare()">move square</button>
+        <button onclick="octagon()">octagon</button>
+        <button onclick="moveupleft()">move up left</button>
+        <button onclick="triangle()">Triangle</button>
+  
+  
+  
+  
+  </body>
+</html>

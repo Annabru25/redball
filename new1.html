@@ -1,0 +1,87 @@
+<!DOCTTYPE html> 
+<html>
+    <head> 
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+       
+        <style> 
+        #redball {
+           position:absolute;
+        }
+        </style>
+       
+       <script> 
+        function pfadeOut(){
+                 var myparagraph=$("#taksa, #redball");
+            myparagraph.fadeOut();
+            
+        }
+           function pfadeIn(){
+                var myparagraph=$("#taksa, #redball");
+                myparagraph.fadeIn();
+            }
+            
+            function moveup(){
+                 var ball=$("#redball");
+                 ball.animate({"top":"-=20"},100,"linear");
+            }
+            function movedown(){
+                 var ball=$("#redball");
+                 ball.animate({"top":"+=20"},200,"linear");
+            }
+             function moveright(){
+               var ball=$("#redball");
+               ball.animate({"left":"+=20"},80,"linear");
+           }
+           function moveleft(){
+               var ball=$("#redball");
+               ball.animate({"left":"-=20"},80,"linear");
+           }
+          function moveupperright(){
+               var ball=$("#redball");
+               ball.animate({"left":"+=20", "top":"-=10"},70,"linear");
+           }
+           
+           function moveupperleft(){
+               var ball=$("#redball");
+               ball.animate({"left":"-=25", "top":"-=20"},70,"linear");
+           }
+           function movedownleft(){
+               var ball=$("#redball");
+               ball.animate({"left":"-=25", "top":"+=20"},70,"linear");
+           }
+           function movedownright(){
+               var ball=$("#redball");
+               ball.animate({"left":"+=20", "top":"+=35"},50,"linear");
+           }
+           
+ </script>
+      </head>  
+    <body> 
+   
+         <p id="taksa">What is the project scope?</p>
+         <p> How  are we going to achieve it?  </p>
+        
+
+  <p>
+                <button onclick="pfadeOut()">Fade Out</button>
+                <button onclick="pfadeIn()">Fade In</button>
+                  
+            <button onclick="sayhello()">press here </button>
+    </p>        
+            
+<button onclick="moveright()">move right</button>
+  <button onclick="moveleft()">move left</button>
+  <button onclick="moveup()">move up</button>
+  <button onclick="movedown()">move down</button>
+  <button onclick="moveupperright()">Up Right</button>
+    <button onclick="moveupperleft()">Up Left</button>
+    <button onclick="movedownleft()">down left</button>
+    <button onclick="movedownright()">down right</button>
+     <button onclick="squarepath()">Square</button>
+  <button onclick="movetriangle()">triangle</button>
+  
+  
+  
+  <img id="redball" src="http://www.psdgraphics.com/wp-content/uploads/2015/04/rocket-psd.jpg" style="width:128px;height:128px;/>
+</body> 
+   </html> 
